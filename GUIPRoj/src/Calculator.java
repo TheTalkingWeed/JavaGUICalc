@@ -469,11 +469,31 @@ public class Calculator implements ActionListener {
             kijelzo.setText(output);
         }
         if (e.getSource()==cos && pressedoperators == 0 && kifejezes.length() != 0){
-            output = "";
+            pressedoperators = 0;
+            kiertekelve = true;
+            double a = Math.cos(Double.parseDouble(output));
+            kijelzo.setText(String.valueOf(a));
+            kifejezes="";
+        }
 
-            //int =
+        if (e.getSource()==sin && pressedoperators == 0 && kifejezes.length() != 0){
+            pressedoperators = 0;
+            kiertekelve = true;
+            double a = Math.sin(Double.parseDouble(output));
+            kijelzo.setText(String.valueOf(a));
+            kifejezes="";
+        }
 
-            kijelzo.setText(output);
+        if (e.getSource()==tan && pressedoperators == 0 && kifejezes.length() != 0){
+            pressedoperators = 0;
+            kiertekelve = true;
+            double a = Math.tan(Double.parseDouble(output));
+            kijelzo.setText(String.valueOf(a));
+            kifejezes="";
+        }
+
+        if (e.getSource()==ctan && pressedoperators == 0 && kifejezes.length() != 0){
+            System.out.println("not programmed yet :)");
         }
         if (e.getSource()==dark1){
             Color gombok = new Color(48,27,63);
